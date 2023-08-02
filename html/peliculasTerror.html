@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Películas y Series</title>
+    <link rel="stylesheet" href="/css/terror.css">
+
+</head>
+
+<body>
+    <h1 id="dataTitle">Peliculas Terror</h1>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Buscar película o serie...">
+        <button onclick="searchMoviesAndSeries()">Buscar</button>
+        <select id="categoryFilter" onchange="filterMoviesAndSeries()">
+            <option value="all">Todas las categorías</option>
+            <option value="peliculas">Películas</option>
+            <option value="series">Series</option>
+        </select>
+    </div>
+
+
+    <div class="movie-cards" id="movieCards">
+        <!-- Aquí se mostrarán las cartas de las películas y series -->
+    </div>
+
+
+
+    <div class="modal" id="trailerModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="details-modal"></div> <!-- Agregar la clase "details-modal" -->
+            <div id="trailerVideo"></div>
+        </div>
+    </div>
+
+    <div class="details-container" id="movieDetailsContainer">
+        <div class="details" id="movieDetails">
+            <!-- Aquí se mostrarán los detalles de la película o serie seleccionada -->
+        </div>
+        <div id="trailerVideoContainer">
+            <!-- Aquí se mostrará el video del trailer -->
+        </div>
+    </div>
+
+
+    <script src="../js/terror.js"></script>
+</body>
+
+</html>
+
